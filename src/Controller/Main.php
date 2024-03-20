@@ -14,7 +14,7 @@ class Main
      */
     public function calculateCommissions(): void
     {
-        $fileReader = new TextFileReader( '../input.txt');
+        $fileReader = new TextFileReader( 'input.txt');
         $binListProvider = new BinListProvider();
         $currencyRateProvider = new ExchangeRateApiProvider();
         $currencyRateProvider->auth();

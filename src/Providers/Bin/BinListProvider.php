@@ -23,8 +23,8 @@ class BinListProvider implements BinProviderInterface
             throw new \Exception('Information for this INN is not found or Error happened');
         }
 
-        $binArray = json_decode($binResultJson);
+        $binObject = json_decode($binResultJson);
 
-        return new CardMetaDataDTO($binArray->scheme, $binArray->type, $binArray->country->alpha2);
+        return new CardMetaDataDTO($binObject->scheme, $binObject->type, $binObject->country->alpha2);
     }
 }

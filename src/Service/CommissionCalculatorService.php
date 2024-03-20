@@ -42,8 +42,6 @@ class CommissionCalculatorService
             while (!$this->fileReader->isEndOfFile()) {
                 $data = $this->fileReader->readLine();
 
-                sleep(3); // try to prevent 429 request error on binlist
-
                 $this->amount = $data['amount'];
                 $this->currency = $data['currency'];
 
